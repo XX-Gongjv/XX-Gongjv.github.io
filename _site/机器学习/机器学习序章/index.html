@@ -1,0 +1,574 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<link rel="shortcut icon" type="image/png" href="/images/KaiNguyeen.png">
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>机器学习序章 - XX-Gongjv</title>
+<meta name="description" content="序言机器学习&amp;人工智能&amp;深度学习，这三个是现在经常听到的词语。一旦提到了这些都会给人一种高大上的感觉，感觉会是一种很难学会的技术。表示在下血本（突然脑抽）的情况下，剁手买了1w多的数据挖掘的网课，目前正在学习它，希望能在学习完成后揭开机器学习的面纱，争取让每个读我的博客的人都能对机器学习有一个较为全面的概念。">
+
+
+  <meta name="author" content="Multipotentialite">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="XX-Gongjv">
+<meta property="og:title" content="机器学习序章">
+<meta property="og:url" content="http://localhost:4000/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%8F%E7%AB%A0/">
+
+
+  <meta property="og:description" content="序言机器学习&amp;人工智能&amp;深度学习，这三个是现在经常听到的词语。一旦提到了这些都会给人一种高大上的感觉，感觉会是一种很难学会的技术。表示在下血本（突然脑抽）的情况下，剁手买了1w多的数据挖掘的网课，目前正在学习它，希望能在学习完成后揭开机器学习的面纱，争取让每个读我的博客的人都能对机器学习有一个较为全面的概念。">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-08-05T00:00:00-09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%8F%E7%AB%A0/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "XX-Gongjv",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="XX-Gongjv Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          XX-Gongjv
+          <span class="site-subtitle"></span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/artwork/" >Artwork</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" itemprop="item"><span itemprop="name">%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">机器学习序章</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/KaiNguyeen.png" alt="Multipotentialite" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Multipotentialite</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>your descriptions</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:yanmengxi0501@163.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://xx-gongjv.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="机器学习序章">
+    <meta itemprop="description" content="序言机器学习&amp;人工智能&amp;深度学习，这三个是现在经常听到的词语。一旦提到了这些都会给人一种高大上的感觉，感觉会是一种很难学会的技术。表示在下血本（突然脑抽）的情况下，剁手买了1w多的数据挖掘的网课，目前正在学习它，希望能在学习完成后揭开机器学习的面纱，争取让每个读我的博客的人都能对机器学习有一个较为全面的概念。">
+    <meta itemprop="datePublished" content="August 05, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">机器学习序章
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="https://images.unsplash.com/photo-1575181963610-33e87fc05a5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="asd" /></p>
+<h3 id="序言">序言</h3>
+<p>机器学习&amp;人工智能&amp;深度学习，这三个是现在经常听到的词语。一旦提到了这些都会给人一种高大上的感觉，感觉会是一种很难学会的技术。表示在下血本（突然脑抽）的情况下，剁手买了1w多的数据挖掘的网课，目前正在学习它，希望能在学习完成后揭开机器学习的面纱，争取让每个读我的博客的人都能对机器学习有一个较为全面的概念。</p>
+
+<p>目前的更新顺序为课程的顺序，在整体学完之后，会按自己的理解进行一个汇总。</p>
+
+<h3 id="什么是机器学习">什么是机器学习</h3>
+
+<p>首先先上官方的卡内基梅隆大学的教授TomMitchell的定义。</p>
+<blockquote>
+  <p>A program can be said to learn from experience E with respect to some class of tasks T and performance measure P , If its performance at tasks in T, as measured by P, improves with experience E.</p>
+</blockquote>
+
+<blockquote>
+  <p>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任务T的经验E；随着提供合适、优质、大量的经验E，该程序对于任务T的性能逐步提高。</p>
+</blockquote>
+
+<p>看起来很官方的说法对吧，接下来粗略的说明是怎么回事。</p>
+
+<p>一句话版本：抓了一把混着豆子的米（数据），根据你对豆子和米的特征的认识（已有经验），把豆子和米分开分别装在两个袋子里（分类），随后验收的人看你是否真的把米和豆子分开了（性能度量）。</p>
+
+<p>数学版本：X*P=Y，Y是分类的类别，X是一个数据，我们找的是矩阵P能使所有的数据X都能对应到相迎的分类Y。</p>
+
+<p>简单来说，机器学习就是分类器，通过学习已有的数据，得到一个数据和类别的关系，再用这个关系来对未来未分类的数据进行预测，这就是我理解的机器学习。</p>
+
+<h3 id="机器学习人工智能深度学习有什么区别">机器学习&amp;人工智能&amp;深度学习有什么区别</h3>
+
+<p>说到这里，有些学过深度学习的人肯定就会疑惑这个和机器学习好像一样啊，深度学习也是把图片分类啊。是的，深度学习准确的来说算是机器学习的一部分，而机器学习和深度学习又可以被人工智能所包含。只不过深度学习在图像识别和语音识别的方便有着突出的优势，而机器学习在数据挖掘，统计学习和自然语言处理方面已经有了很大的发展。</p>
+
+<h3 id="它的工作流程是什么样子">它的工作流程是什么样子</h3>
+
+<p>数据收集=&gt;数据预处理(数据清洗)=&gt;特征提取=&gt;模型构建=&gt;模型测试评估=&gt;上线=&gt;迭代</p>
+
+<p>数据收集和数据清洗：可以理解为，做饭前的买菜（为模型提供训练用的有效数据，去除显而易见的无效数据）</p>
+
+<p>特征提取：可以理解为，炒菜前的切菜，切的越好，炒完越好吃（即从数据中选出可能能代表数据特征的属性）</p>
+
+<p>模型构建：可以理解为炒菜，用切好的菜，以一定的顺序进行翻炒（选择合适的算法来训练模型）。</p>
+
+<p>模型测试评估：试吃，如果不好吃，则反思是不是切的不好，菜买的不对，或者炒的顺序不对（测试用例看是否符合标准，如果不对责重复前面的步骤）。</p>
+
+<p>特别的说，训练的部分，其实就是以当前的权值运算出来的结果和已知结果对比，然后根据差距来修改权值，如此往复，使预测结果和已知结果无限接近。</p>
+
+<h3 id="算法的分类和选择">算法的分类和选择</h3>
+
+<p>机器学习分为如下几个分类：</p>
+
+<ol>
+  <li>
+    <p>有监督学习：也就是训练用的数据是有标签的，在训练前是人工分好类的。再用训练过后的模型，对未来收到的数据进行分类，来达到预测的目的。</p>
+  </li>
+  <li>
+    <p>无监督学习：和有监督学习相比，训练的数据是没有分类的，在无监督学习中，就是通过学习，把这些为分类的数据进行分类，来推断出数据的一些内在结构。</p>
+  </li>
+  <li>
+    <p>半监督学习：训练的数据包含少量的含有标签的数据，通过这些数据来训练和分类。顾名思义就是无监督和有监督的结合。</p>
+  </li>
+</ol>
+
+<p>然后从算法的角度来看，又可以分为如下三种：</p>
+
+<ol>
+  <li>
+    <p>分类：标签是整形的，是一个一个独立的离散的。分类标识的时候使用int型。</p>
+  </li>
+  <li>
+    <p>回归：标签是浮点型，分类是连续的而不是离散的。分类表示用float的型。</p>
+  </li>
+  <li>
+    <p>聚类：1，2都是有监督学习，而3则是无监督学习。</p>
+  </li>
+</ol>
+
+<p>最后附上一个算法的选择图：（图很清楚只需要一点的英文水平就能看懂）
+<img src="/assets/images/blog/20180805-MachineLearningPreface/page1.jpeg" alt="" /></p>
+
+<h3 id="公开数据获取渠道">公开数据获取渠道</h3>
+
+<ul>
+  <li><a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a> （新手推荐这个，有标签）</li>
+  <li><a href="https://aws.amazon.com/cn/public-datasets/%20">Amazon Public-datasets</a></li>
+  <li><a href="https://www.kaggle.com/competitions%20">Kaggle</a></li>
+  <li><a href="http://www.kdnuggets.com/datasets/index.html%20">KDnuggets</a></li>
+  <li><a href="http://www.sogou.com/labs/resource/list_pingce.php">Sougou语料库</a></li>
+  <li><a href="https://tianchi.aliyun.com/datalab/index.htm%20">天池</a></li>
+  <li><a href="http://www.pkbigdata.com/common/cmptIndex.html">DC竞赛</a></li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#machinelearning" class="page__taxonomy-item" rel="tag">MachineLearning</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" class="page__taxonomy-item" rel="tag">机器学习</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-05T00:00:00-09:00">August 05, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li> -->
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy;2017 - 2019 XX-Gongjv. Powered by <a href="https://github.com/kainguyeen" rel="nofollow">Github</a> &amp; <a href="https://www.instagram.com/kainguyeen/" rel="nofollow">Kai Nguyeen</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
